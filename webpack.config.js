@@ -13,6 +13,16 @@ module.exports = {
         // Delete all unused hashed files
         clean: true
     },
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'dist')
+        },
+        port: 3000,
+        open: true, 
+        hot: true,
+        compress: true,
+        historyApiFallback: true
+    },
     // loaders for styles and css
     module: {
         rules: [
