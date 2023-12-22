@@ -13,6 +13,7 @@ module.exports = {
         // Delete all unused hashed files
         clean: true
     },
+    devtool: 'source-map',
     devServer: {
         static: {
             directory: path.resolve(__dirname, 'dist')
