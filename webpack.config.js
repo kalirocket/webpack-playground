@@ -11,7 +11,9 @@ module.exports = {
         // Set contenthash for new port for old code
         filename: '[name].[contenthash].js',
         // Delete all unused hashed files
-        clean: true
+        clean: true,
+        // Make asset name stay the same to prevent weird namings
+        assetModuleFilename: '[name][ext]' 
     },
     devtool: 'source-map',
     devServer: {
@@ -42,6 +44,11 @@ module.exports = {
                         ]
                     }
                 }
+
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource'
 
             }
         ]
